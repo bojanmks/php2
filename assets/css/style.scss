@@ -1,0 +1,377 @@
+@font-face {
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-family: "Roboto";
+}
+  
+@font-face {
+    src: url("../fonts/PermanentMarker-Regular.ttf");
+    font-family: "PermanentMarker";
+}
+
+$color-dark-blue: #16425b;
+$color-blue: #2f6690;
+$color-brown: #826251;
+//$color-white: #ffe8d1;
+$color-white: #fff6ed;
+$color-lt-blue: #5bc0eb;
+
+$color-black-t: rgba(0, 0, 0, 0.6);
+$color-white-t: rgba(255, 255, 255, 0.6);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $color-dark-blue;
+    font-family: "Roboto";
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-dark-blue;
+}
+
+body {
+    background-color: $color-white;
+}
+
+.font-xs {
+    font-size: 12px;
+}
+  
+.font-small {
+    font-size: 16px;
+}
+  
+.font-medium {
+    font-size: 19px;
+}
+  
+.font-large {
+    font-size: 30px;
+}
+  
+.font-xl {
+    font-size: 40px;
+}
+
+.font-xxl {
+    font-size: 60px;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    background-color: $color-black-t;
+}
+
+.cover-white {
+    width: 100%;
+    height: 100%;
+    background-color: $color-white-t;
+}
+
+.underline {
+    display: block;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    background-color: $color-dark-blue;
+}
+
+.btn-primary {
+    border: none;
+    box-shadow: none;
+    background-color: $color-dark-blue !important;
+    color: $color-white !important;
+    transition: background-color .1s;
+    i {
+        color: $color-white !important;
+    }
+    &:hover {
+        background-color: $color-blue !important;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    &:active:focus {
+        box-shadow: none;
+    }
+}
+
+// TO TOP
+#toTop {
+    right: 30px;
+    bottom: 30px;
+    background-color: $color-lt-blue;
+    display: block;
+}
+
+#toTopArrow {
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid $color-dark-blue;
+    border-top: 2px solid $color-dark-blue;
+    transform: rotate(45deg);
+    top: 3px;
+}
+
+// LOGIN BAR
+#loginbar {
+    background-color: $color-white;
+    a {
+        color: $color-dark-blue;
+    }
+}
+
+.right-border {
+    border-right: 1px solid $color-dark-blue;
+}
+
+// NAV
+#navbar {
+    background-color: $color-blue;
+    a, i {
+        color: $color-white;
+    }
+}
+
+#logo {
+    a {
+        font-family: PermanentMarker;
+    }
+}
+
+#nav {
+    a {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background-color: $color-white;
+            transition: width .2s;
+        }
+        &:hover {
+            &:after {
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+#cartQuantity {
+    color: $color-white;
+    background-color: $color-brown;
+    right: 0;
+    bottom: 6px;
+    width: 17px;
+    height: 17px;
+}
+
+// sidenav
+#sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#sidenavContent {
+    width: 250px;
+    height: 100%;
+    background-color: $color-blue;
+    a {
+        color: $color-white;
+        transition: background-color .1s, color .1s;
+        &:hover {
+            color: $color-dark-blue;
+            background-color: $color-white;
+        }
+    }
+}
+
+// MAIN
+
+// home
+.slider-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sliderText {
+    top: 0;
+    left: 0;
+    p, h2 {
+        color: $color-white;
+    }
+    a {
+        background-color: $color-white;
+        color: $color-dark-blue;
+        transition: background-color .1s, color .1s;
+        &:hover {
+            background-color: $color-dark-blue;
+            color: $color-white;
+        }
+    }
+}
+
+#about {
+    h3 {
+        color: $color-brown;
+    }
+}
+
+#aboutUsImage {
+    width: 300px;
+}
+
+// phones
+.phoneDiv {
+    overflow: hidden;
+    &:hover {
+        .phoneOverlay {
+            max-height: 100%;
+        }
+    }
+}
+
+.phoneOverlay {
+    top: 0;
+    left: 0;
+    max-height: 0px;
+    transition: max-height .3s;
+    display: flex;
+    overflow: hidden;
+}
+
+.btn-white {
+    background-color: $color-white;
+    transition: .1s;
+    &:hover {
+        background-color: $color-lt-blue;
+        color: $color-white;
+        i {
+            color: $color-white;
+        }
+    }
+}
+
+.activePage {
+    background-color: $color-blue !important;
+}
+
+.cartSuccessModal {
+    pointer-events: none;
+}
+
+.cartSuccessModalContent {
+    display: none;
+}
+
+// contact
+.border-correct {
+    border: 1px solid $color-lt-blue;
+}
+
+.error-message {
+    display: block;
+}
+
+// author
+#authorImage {
+    &:hover {
+        #authorSocials {
+            max-height: 100%;
+        }
+    }
+}
+
+#authorSocials {
+    width: 100%;
+    max-height: 0px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    transition: max-height .3s;
+    ul {
+        display: flex;
+    }
+}
+
+#portfolioLink {
+    background-color: $color-blue;
+    color: $color-white;
+}
+
+// cart
+.table {
+    min-width: 600px !important;
+}
+
+.btnQuantity {
+    width: 20px;
+    height: 20px;
+}
+
+// admin
+.table-responsive {
+    max-height: 500px !important;
+}
+
+.colActions {
+    //display: block;
+    min-width: 130px;
+}
+
+.messagesDiv {
+    max-height: 700px;
+}
+
+// FOOTER
+#footer {
+    background-color: $color-dark-blue;
+    color: $color-white !important;
+    a, i, span {
+        color: $color-white !important;
+    }
+}
+
+.footerSeparator {
+    width: 20px;
+    height: 2px;
+    background-color: $color-white;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 767px) {
+    // text size
+    .font-xs {
+      font-size: 10px;
+    }
+    .font-small {
+      font-size: 14px;
+    }
+    .font-medium {
+      font-size: 17px;
+    }
+    .font-large {
+      font-size: 25px;
+    }
+    .font-xl {
+      font-size: 30px;
+    }
+    .font-xxl {
+        font-size: 40px;
+    }
+}
