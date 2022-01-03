@@ -6,7 +6,7 @@
         <div class="col-12 col-md-6 mb-4 mb-md-0">
             <p class="font-small">If you wish to reach out to us, you can do so via social media, the information listed below, or by filling out the contact form.</p>
             <ul class="p-0">
-                <li class="font-small"><i class="fas fa-phone me-1"></i>+381 65/518-3225</li>
+                <li class="font-small"><i class="fas fa-phone me-1"></i>+381 60/123-4567</li>
                 <li class="font-small"><i class="fas fa-envelope me-1"></i>bojan.maksimovic.92.19@ict.edu.rs</li>
             </ul>
         </div>
